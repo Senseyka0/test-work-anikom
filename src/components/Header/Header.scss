@@ -1,0 +1,23 @@
+$base_color: #f3c340;
+
+.header {
+   margin-top: 30px;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   font-size: 18px;
+   .nav-bar {
+      display: flex;
+      &__link a {
+         margin: 40px;
+         color: #fff;
+         margin-left: 0;
+         transition: 0.2s ease-in-out;
+
+         &:hover {
+            border-bottom: 2px solid $base_color;
+            padding-bottom: 5px;
+         }
+      }
+   }
+}

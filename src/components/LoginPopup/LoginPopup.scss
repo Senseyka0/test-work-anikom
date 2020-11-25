@@ -1,0 +1,50 @@
+$base_color: #f3c340;
+$danger: #f75757;
+
+.popup {
+   color: #fff;
+   position: relative;
+   .popup__active {
+      position: absolute;
+      width: 260px;
+      top: 60px;
+      right: 0;
+      padding: 20px;
+      border: 1px solid $base_color;
+      border-radius: 7px;
+      background-color: #fff;
+      color: #000;
+      text-align: center;
+      z-index: 99999;
+
+      &-label {
+         display: block;
+         margin-top: 10px;
+      }
+      &-input {
+         margin-top: 10px;
+      }
+      &-error-message {
+         color: $danger;
+         font-size: 14px;
+         margin-top: 5px;
+         font-weight: 600;
+      }
+      &-button {
+         min-width: 120px;
+         margin-top: 10px;
+      }
+      &-text {
+         font-size: 14px;
+         margin-top: 16px;
+         .gold {
+            color: $base_color;
+            font-weight: 500;
+            cursor: pointer;
+            &:hover {
+               color: darken($base_color, 12%);
+            }
+         }
+      }
+   }
+}
