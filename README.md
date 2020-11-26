@@ -1,70 +1,30 @@
-# Getting Started with Create React App
+**Практическое задание на вакансию Frontend-разработчика**
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**Создать SPA на React + Redux. Вверху должна быть строка меню: Главная, Новости, Вход/Выход**
 
-## Available Scripts
+**1) Страница “Главная”.**
 
-In the project directory, you can run:
+На ней должен быть текст: “Привет, Гость”, если пользователь не авторизован и текст “Привет, {LOGIN}”, если пользователь авторизован.
 
-### `npm start`
+**2) Вход**
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Производится на попапе, вводится логин и пароль (для упрощения правильную пару логин и пароль можно зашить в коде). При неверном вводе должна быть индикация ошибки.
+После успешного входа попап закрывается.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+**3) “Новости”**
 
-### `npm test`
+Отображается список новостей и поиск по новостям. Фильтрация новостей должна производиться сразу при вводе текста поиска. У каждой новости есть: название, текст и дата создания.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+**4) Должно быть 2 пользователя:**
 
-### `npm run build`
+- пользователь
+- админ
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+У пользователя должна быть возможность добавить новость. У админа должна быть возможность одобрить новость или удалить. По умолчанию созданная пользователем новость не является одобренной, но сам создатель её видит.
+Гость должен видеть только одобренные админом новости. Гость не может создавать или одобрять новости.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+**5) Верстка выполнена с применением БЭМ**
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
+### Admin: Login: admin@gmail.com Password: 123456
+### User: Login: user@gmail.com Password: 123456
