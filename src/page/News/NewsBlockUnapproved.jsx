@@ -1,8 +1,8 @@
-import React from "react";
+import React, { memo } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { createNewNews, deleteNewNews } from "../../redux/reducers/news";
 
-const NewsBlockUnapproved = ({ id, imgUrl, title, descr, date }) => {
+const NewsBlockUnapproved = memo(({ id, imgUrl, title, descr, date }) => {
    const dispatch = useDispatch();
 
    const { login } = useSelector((state) => ({
@@ -40,6 +40,6 @@ const NewsBlockUnapproved = ({ id, imgUrl, title, descr, date }) => {
          )}
       </div>
    );
-};
+});
 
 export default NewsBlockUnapproved;

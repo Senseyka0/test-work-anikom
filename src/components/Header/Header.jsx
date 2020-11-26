@@ -1,11 +1,11 @@
-import React from "react";
+import React, { memo } from "react";
 import { NavLink } from "react-router-dom";
 
 import Popup from "../LoginPopup/LoginPopup";
 
 import "./Header.scss";
 
-const Header = () => {
+const Header = memo(() => {
    return (
       <header className="header">
          <ul className="nav-bar">
@@ -20,6 +20,6 @@ const Header = () => {
          <Popup />
       </header>
    );
-};
+});
 
 export default Header;

@@ -1,9 +1,9 @@
-import React from "react";
+import React, { memo } from "react";
 import { useSelector } from "react-redux";
 
 import "./MainPage.scss";
 
-const MainPage = () => {
+const MainPage = memo(() => {
    const { login } = useSelector((state) => ({
       login: state.login,
    }));
@@ -14,6 +14,6 @@ const MainPage = () => {
          </h1>
       </div>
    );
-};
+});
 
 export default MainPage;

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { memo, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
 import {
@@ -15,7 +15,7 @@ import NewsBlock from "./NewsBlock";
 import "./News.scss";
 import NewsBlockUnapproved from "./NewsBlockUnapproved";
 
-const News = () => {
+const News = memo(() => {
    const [isOpenPopup, setIsOpenPopup] = useState(false);
 
    const dispatch = useDispatch();
@@ -144,6 +144,6 @@ const News = () => {
          </div>
       </div>
    );
-};
+});
 
 export default News;

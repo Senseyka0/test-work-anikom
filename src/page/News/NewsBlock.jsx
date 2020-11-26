@@ -1,6 +1,6 @@
-import React from "react";
+import React, { memo } from "react";
 
-const NewsBlock = ({ imgUrl, title, descr, date }) => {
+const NewsBlock = memo(({ imgUrl, title, descr, date }) => {
    return (
       <div className="block-item">
          <div className="block-item__img">
@@ -13,6 +13,6 @@ const NewsBlock = ({ imgUrl, title, descr, date }) => {
          </div>
       </div>
    );
-};
+});
 
 export default NewsBlock;

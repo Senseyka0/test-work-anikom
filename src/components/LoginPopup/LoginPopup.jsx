@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { memo, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
 import {
@@ -13,7 +13,7 @@ import { fetchAuthListener, fetchLogin, fetchSignUp } from "../../redux/reducers
 
 import "./LoginPopup.scss";
 
-const LoginPopup = () => {
+const LoginPopup = memo(() => {
    const dispatch = useDispatch();
 
    const { login } = useSelector((state) => ({
@@ -131,6 +131,6 @@ const LoginPopup = () => {
          )}
       </div>
    );
-};
+});
 
 export default LoginPopup;
